@@ -13,7 +13,7 @@ if [ "$(whoami)" != "root" ]; then
     exit 1
 fi
 
-if [ "$(uname -a)" != "root" ]; then
+if [ "arm7vl" not in "$(uname -a)" ]; then
     echo "Sorry, this script must be executed on a 32 bit system"
     exit 1
 fi
