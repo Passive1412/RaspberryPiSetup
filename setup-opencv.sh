@@ -27,10 +27,10 @@ echo
 #echo "Purging unneeded libraries"
 #echo "----------------"
 #echo
-apt-get -y purge BlueJ
-apt-get -y purge Claws Mail
-#apt-get -y purge Greenfoot
-#apt-get -y purge libreoffice*
+apt-get -y purge jluej
+apt-get -y purge claws-mail
+apt-get -y purge greenfoot
+apt-get -y purge libreoffice*
 #apt-get -y purge Mathematica
 #apt-get -y purge Minecraft
 #apt-get -y purge Node-RED
