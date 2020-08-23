@@ -92,3 +92,9 @@ unzip opencv_contrib.zip
 
 mv opencv-4.4.0 opencv
 mv opencv_contrib-4.4.0 opencv_contrib
+
+echo
+echo "-----------------------"
+echo "Begin Compile OpenCV"
+echo "-----------------------"
+echo
