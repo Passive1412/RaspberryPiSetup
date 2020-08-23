@@ -13,6 +13,11 @@ if [ "$(whoami)" != "root" ]; then
     exit 1
 fi
 
+if [ "$(uname -a)" != "root" ]; then
+    echo "Sorry, this script must be executed on a 32 bit system"
+    exit 1
+fi
+
 echo
 echo "----------------"
 echo "Updating and upgrading sources"
@@ -57,5 +62,19 @@ echo "-----------------------"
 echo "Installing dependencies"
 echo "-----------------------"
 echo
+
+apt-get install build-essential cmake git unzip pkg-config
+apt-get install libjpeg-dev libpng-dev libtiff-dev
+apt-get install libavcodec-dev libavformat-dev libswscale-dev
+apt-get install libgtk2.0-dev libcanberra-gtk*
+apt-get install libxvidcore-dev libx264-dev libgtk-3-dev
+apt-get install python3-dev python3-numpy python3-pip
+apt-get install python-dev python-numpy
+apt-get install libtbb2 libtbb-dev libdc1394-22-dev
+apt-get install libv4l-dev v4l-utils
+apt-get install libjasper-dev libopenblas-dev libatlas-base-dev libblas-dev
+apt-get install liblapack-dev gfortran
+apt-get install gcc-arm*
+apt-get install protobuf-compiler
 
 
