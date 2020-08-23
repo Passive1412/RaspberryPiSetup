@@ -145,6 +145,11 @@ echo "Final OpenCV Compile"
 echo "-----------------------"
 echo
 
+make -j4
+make install
+sudo ldconfig
+sudo apt-get update
+
 echo
 echo "-----------------------"
 echo "Reverting Swap Space Size"
@@ -155,3 +160,15 @@ echo
 sed -i -e 's/CONF_SWAPSIZE=2048/CONF_SWAPSIZE=100/g' /etc/dphys-swapfile
 /etc/init.d/dphys-swapfile stop
 /etc/init.d/dphys-swapfile start
+
+
+echo
+echo "-----------------------"
+echo "Removing zip files"
+echo "-----------------------"
+echo
+
+cd ~
+rm opencv.zip
+rm opencv_contrib.zip
+#reboot
