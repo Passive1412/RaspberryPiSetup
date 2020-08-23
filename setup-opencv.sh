@@ -27,19 +27,21 @@ echo
 #echo "Purging unneeded libraries"
 #echo "----------------"
 #echo
-#apt-get -y purge jluej
-#apt-get -y purge claws-mail
-#apt-get -y purge greenfoot
-#apt-get -y purge libreoffice*
-#apt-get -y purge wolfram-engine
-#apt-get -y purge python-minecraftpi
-apt-get -y purge red
-apt-get -y purge scratch
-apt-get -y purge strach2
-apt-get -y purge sense-smartsim
-#apt-get -y purge Sense Sonic Pi
-#apt-get -y clean
-#apt-get -y autoremov
+apt-get -y remove --purge bluej
+apt-get -y remove --purge claws-mail*
+apt-get -y remove --purge greenfoot*
+apt-get -y remove --purge libreoffice
+apt-get -y remove --purge wolfram-engine
+apt-get -y remove --purge python-minecraftpi
+apt-get -y remove --purge minecraft-pi
+apt-get -y remove --purge nodered
+apt-get -y remove --purge scratch
+apt-get -y remove --purge scratch2
+apt-get -y remove --purge scratch3
+apt-get -y remove --purge smartsim
+apt-get -y remove --purge sonic-pi
+apt-get -y clean
+apt-get -y autoremov
 
 
 echo
