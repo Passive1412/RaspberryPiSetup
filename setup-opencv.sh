@@ -82,9 +82,13 @@ echo "-----------------------"
 echo "Installing more dependencies"
 echo "-----------------------"
 echo
-cd ~
-wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.0.zip
-unzip -o opencv.zip
 
-wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.0.zip
-unzip -o opencv_contrib.zip
+cd ~
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.0.zip
+
+unzip opencv.zip
+unzip opencv_contrib.zip
+
+mv opencv-4.4.0 opencv
+mv opencv_contrib-4.4.0 opencv_contrib
