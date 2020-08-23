@@ -31,14 +31,13 @@ echo
 #apt-get -y purge claws-mail
 #apt-get -y purge greenfoot
 #apt-get -y purge libreoffice*
-apt-get -y purge mathematica
-apt-get -y purge minecraft
-apt-get -y purge Node-RED
-apt-get -y purge Node-Scratch
-apt-get -y purge Node-Strach2
-apt-get -y purge Sense SmartSim
+apt-get -y purge wolfram-engine
+apt-get -y purge python-minecraftpi
+apt-get -y purge node-red
+apt-get -y purge node-scratch
+apt-get -y purge node-scrach2
+apt-get -y purge sense-smartsim
 #apt-get -y purge Sense Sonic Pi
-#apt-get -y purge wolfram-engine
 #apt-get -y clean
 #apt-get -y autoremov
 
