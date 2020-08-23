@@ -127,3 +127,31 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
         -D BUILD_opencv_python3=TRUE \
         -D OPENCV_GENERATE_PKGCONFIG=ON \
         -D BUILD_EXAMPLES=OFF ..
+
+echo
+echo "-----------------------"
+echo "Updaating Swap Space Size"
+echo "to use all 4 cores."
+echo "-----------------------"
+echo
+
+sed -i -e 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=2048/g' /etc/dphys-swapfile
+/etc/init.d/dphys-swapfile stop
+/etc/init.d/dphys-swapfile start
+
+echo
+echo "-----------------------"
+echo "Final OpenCV Compile"
+echo "-----------------------"
+echo
+
+echo
+echo "-----------------------"
+echo "Reverting Swap Space Size"
+echo "-----------------------"
+echo
+
+# replace CONF_SWAPSIZE from 100 to 1024 in the `/etc/dphys-swapfile` file.
+sed -i -e 's/CONF_SWAPSIZE=2048/CONF_SWAPSIZE=100/g' /etc/dphys-swapfile
+/etc/init.d/dphys-swapfile stop
+/etc/init.d/dphys-swapfile start
