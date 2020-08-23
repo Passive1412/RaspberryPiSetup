@@ -41,8 +41,7 @@ apt-get -y remove --purge scratch3
 apt-get -y remove --purge smartsim
 apt-get -y remove --purge sonic-pi
 apt-get -y clean
-apt-get -y autoremov
-
+apt-get -y autoremove
 
 echo
 echo "----------------"
@@ -50,8 +49,8 @@ echo "Update & Upgrade"
 echo "----------------"
 echo
 
-#apt-get -y update
-#apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 
 echo
 echo "-----------------------"
