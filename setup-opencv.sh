@@ -164,7 +164,7 @@ sed -i -e 's/CONF_SWAPSIZE=2048/CONF_SWAPSIZE=100/g' /etc/dphys-swapfile
 
 echo
 echo "-----------------------"
-echo "Removing zip files"
+echo "Removing zip files and cleanup"
 echo "-----------------------"
 echo
 
@@ -174,6 +174,17 @@ rm opencv_contrib.zip
 
 echo
 echo "-----------------------"
-echo "Instalation done, reboot the raspberry for it to take effect"
+echo "Instalation done, Checking Instalation"
+echo "-----------------------"
+echo
+
+python -c "import cv2; print(cv2.__version__)"
+python2 -c "import cv2; print(cv2.__version__)"
+
+
+echo
+echo "-----------------------"
+echo "Do you see a version number or an error? Otherwise you might need to reboot"
+echo "Instalation done, reboot the raspberry"
 echo "-----------------------"
 echo
